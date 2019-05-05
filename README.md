@@ -1,1 +1,5 @@
-# devmachiine.github.io
+# colorado wang
+
+### what magic is this ?
+
+_generated from markdonwn_
