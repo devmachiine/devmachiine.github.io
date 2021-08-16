@@ -13,3 +13,5 @@ const gha = {
     })
   }
 };
+
+export { gha };
