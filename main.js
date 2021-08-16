@@ -14,4 +14,6 @@ const gha = {
   }
 };
 
-export { gha };
+window.gha = gha;
+
+// export { gha };
