@@ -33,3 +33,5 @@ async function generate() {
   let hashhash = await digestMessage(inputHash + saltHash)
   alert(`${hashhash.slice(-4)}`)
 }
+
+window.generate = generate;
