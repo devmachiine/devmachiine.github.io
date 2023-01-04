@@ -34,6 +34,8 @@ async function generate() {
   let inputHash = await digestMessage(input)
   let saltHash = await digestMessage(salt)
   let hashhash = await digestMessage(inputHash + saltHash)
+  inputHash = await digestMessage('prevent values hanging around')
+  saltHash = await digestMessage('while the alert output is open')
   alert(`${hashhash.slice(-4)}`)
 }
 
