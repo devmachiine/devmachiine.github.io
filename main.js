@@ -27,8 +27,8 @@ async function digestMessage(message) {
 
 async function generate() {
   let input = prompt("Enter first data part")
-  if(input.length !== 4){
-      alert(`input size is different than expected (${input.length} instead of 4)`)
+  if(input.length < 1){
+      alert(`input size is smaller than expected (${input.length} instead of > 1)`)
   }
   let salt = prompt("Enter secret")
   let inputHash = await digestMessage(input)
