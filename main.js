@@ -36,7 +36,8 @@ async function generate() {
   let hashhash = await digestMessage(inputHash + saltHash)
   inputHash = await digestMessage('prevent values hanging around')
   saltHash = await digestMessage('while the alert output is open')
-  alert(`${hashhash.slice(-4)}`)
+  let displayHash = hashhash.match(/.{4}/g).join('-')
+  alert(displayHash)
 }
 
 window.generate = generate;
