@@ -1,7 +1,7 @@
 class TextBackground extends HTMLElement {
     constructor() {
         super();
-        this.__characterPool = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789$#=?"
+        this.__characterPool = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789$#="
     }
 
     generateRandomString() {
