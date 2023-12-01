@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Devmachiine</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="shortcut icon" href="assets/colors.ico" />
+    <script src='components/text-background/main.js'></script>
+</head>
+<body>
+    <text-background></text-background>
+</body>
+<script>
+    window.onresize = () =>{
+        // get custom text-background element
+        let textBackground = document.getElementsByTagName("text-background")[0];
+        parent = textBackground.parentNode;
+        textBackground.remove();        
+        // create new text-background element
+        let newTextBackground = document.createElement("text-background");
+        parent.appendChild(newTextBackground);
+    }
+</script>
+</html>

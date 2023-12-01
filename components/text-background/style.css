@@ -1,0 +1,41 @@
+#dynamic-bg {
+    /* Fix position to the viewport top left, aligned by #pixels to account for animation */
+    position: fixed;  
+    top: -50px;          
+    left: -50px;  
+    
+    /* oversize so that animation doesn't move element out of viewport */      
+    width: 200vw;    
+    height: 200vh;
+
+    /* Place behind all other elements */
+    z-index: -1;    
+
+    /* Hide any content that doesn't fit */
+    overflow: hidden; 
+
+    /* Wrap lines at word boundaries */
+    word-wrap: break-word;
+
+    /* Font where all characters have the same width */
+    font-family: "Courier New", Courier, monospace;
+    background-color: #333;
+    color: black;
+
+    /* set the font to not be selectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    
+    animation: circular 30s infinite linear;    
+}
+
+@keyframes circular {
+    0% {
+      transform: rotate(0deg) translate(50px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translate(50px) rotate(-360deg);
+    }
+}
